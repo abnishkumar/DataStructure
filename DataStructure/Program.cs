@@ -1,4 +1,5 @@
-﻿using LinkedList;
+﻿using ArraysandStrings;
+using LinkedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,21 +12,32 @@ namespace DataStructure
     {
         static void Main(string[] args)
         {
-            SinglyLinkedList sList = new SinglyLinkedList();
-            DoublyLinkList dList = new DoublyLinkList();
-            CircularLinkList cList = new CircularLinkList();
-            Random rand = new Random();
-            for (int i = 0; i < 10; i++)
+            bool isLinkedListTest = false;
+            bool isStringArrayTest = true;
+            if (isLinkedListTest)
             {
-                var nodeVal = rand.Next(10, 20);
-                sList.AddNewNode(nodeVal.ToString());
-                dList.AddNewNode(nodeVal.ToString());
-                cList.AddNewNode(nodeVal.ToString());
+                SinglyLinkedList sList = new SinglyLinkedList();
+                DoublyLinkList dList = new DoublyLinkList();
+                CircularLinkList cList = new CircularLinkList();
+                Random rand = new Random();
+                for (int i = 0; i < 10; i++)
+                {
+                    var nodeVal = rand.Next(10, 20);
+                    sList.AddNewNode(nodeVal.ToString());
+                    dList.AddNewNode(nodeVal.ToString());
+                    cList.AddNewNode(nodeVal.ToString());
+                }
+                sList.PrintAllNode();
+                sList.ReverseNode();
+                sList.RemoveDuplicateWithBuffer();
+                // sList.RemoveDuplicateWithoutBuffer();
             }
-            sList.PrintAllNode();
-            sList.ReverseNode();
-            sList.RemoveDuplicateWithBuffer();
-            // sList.RemoveDuplicateWithoutBuffer();
+            if (isStringArrayTest)
+            {
+                ShiftCharacterKpositions shiftCharacter = new ShiftCharacterKpositions();
+
+                shiftCharacter.SiftByK("abnish",2);
+            }
             Console.ReadKey();
         }
     }
