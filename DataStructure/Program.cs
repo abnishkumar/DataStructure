@@ -36,7 +36,13 @@ namespace DataStructure
             {
                 ShiftCharacterKpositions shiftCharacter = new ShiftCharacterKpositions();
 
-                shiftCharacter.SiftByK("abnish",2);
+                shiftCharacter.SiftByK("abnish", 2);
+
+                StringHasUniqueChar stringHasUniqueChar = new StringHasUniqueChar();
+                stringHasUniqueChar.StringHasUniqueCharacter("aabnish");
+
+                CheckPermutation checkPermutation = new CheckPermutation();
+                checkPermutation.CheckStringPermutation("abnish", "shabnI");
             }
             Console.ReadKey();
         }

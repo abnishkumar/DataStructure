@@ -13,8 +13,9 @@ namespace ArraysandStrings
         /// </summary>
         /// <param name="origionalData"></param>
         /// <param name="siftedCharFromCurrentPosition"></param>
-        public void SiftByK(string str,int siftedCharFromCurrentPosition)
+        public void SiftByK(string str, int siftedCharFromCurrentPosition)
         {
+            Console.WriteLine("=============sifted Char From Current Position===========");
             var origionalData = str.ToCharArray().Select(c => c.ToString()).ToArray();
             var origionalDataLength = origionalData.Count();
 
@@ -25,7 +26,8 @@ namespace ArraysandStrings
                 temp[position] = origionalData[i];
             }
 
-            Console.WriteLine(string.Concat(temp));
+            Console.WriteLine($"{str} Shifted by  {siftedCharFromCurrentPosition} Position, {string.Concat(temp)}");
+            Console.WriteLine();
         }
     }
 }
