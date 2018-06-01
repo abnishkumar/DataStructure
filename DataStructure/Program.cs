@@ -43,6 +43,14 @@ namespace DataStructure
 
                 CheckPermutation checkPermutation = new CheckPermutation();
                 checkPermutation.CheckStringPermutation("abnish", "shabnI");
+                ReplaceSpace replaceSpace = new ReplaceSpace();
+                replaceSpace.ReplaceSpaceWithPercent20("abnish kumar choudhary   ");
+
+                OneAwayString oneAwayString = new OneAwayString();
+                oneAwayString.CheckOneAwayString("abnish", "abnis");
+                oneAwayString.CheckOneAwayString("abnish", "abnish");
+                oneAwayString.CheckOneAwayString("abnish", "sanjeet");
+
             }
             Console.ReadKey();
         }

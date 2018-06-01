@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckPermutation.cs" />
+    <Compile Include="OneAwayString.cs" />
+    <Compile Include="PalindromePermutation.cs" />
+    <Compile Include="ReplaceSpace.cs" />
     <Compile Include="ShiftCharacterKpositions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringHasUniqueChar.cs" />
