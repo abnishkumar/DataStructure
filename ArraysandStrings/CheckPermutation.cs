@@ -57,6 +57,11 @@ namespace ArraysandStrings
         {
             Console.WriteLine("===========Check String Identical/permutation============");
 
+            if (firrstStr.Count() != secondStr.Count())
+            {
+                Console.WriteLine("String is not Identical");
+                return;
+            }
             int[] letters = new int[128]; // Assumption(always check by interviewer size of char set,so i assume the char set is ASCII.)
 
             char[] s_array = firrstStr.ToCharArray();
@@ -75,12 +80,12 @@ namespace ArraysandStrings
                 letters[c]--;
                 if (letters[c] < 0)
                 {
-                    Console.WriteLine("String have not Identical char.");
+                    Console.WriteLine("String is not Identical char.");
                     return;
                 }
             }
 
-            Console.WriteLine("String have Identical char.");
+            Console.WriteLine("String is Identical.");
         }
     }
 }
