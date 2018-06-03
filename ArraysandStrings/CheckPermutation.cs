@@ -24,6 +24,7 @@ namespace ArraysandStrings
             if (firstStr.Length != secondStr.Length)
             {
                 Console.WriteLine("first String is not permutation of other!!");
+                CheckTwoStringHaveIdenticalChar(firstStr, secondStr);
                 return;
             }
             char[] firstCharSet = firstStr.ToCharArray();
@@ -42,7 +43,44 @@ namespace ArraysandStrings
                 Console.WriteLine("first String is not permutation of other!!");
 
             }
+            CheckTwoStringHaveIdenticalChar(firstStr, secondStr);
+
             Console.WriteLine();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="firrstStr"></param>
+        /// <param name="secondStr"></param>
+        public void CheckTwoStringHaveIdenticalChar(string firrstStr, string secondStr)
+        {
+            Console.WriteLine("===========Check String Identical/permutation============");
+
+            int[] letters = new int[128]; // Assumption(always check by interviewer size of char set,so i assume the char set is ASCII.)
+
+            char[] s_array = firrstStr.ToCharArray();
+
+            // now we count number of each char in firstStr
+
+            foreach (var item in s_array)
+            {
+                letters[item]++;
+            }
+
+            // now we loop thru secondStr and decrease count of each char from secondStr. 
+            for (int i = 0; i < secondStr.Count(); i++)
+            {
+                int c = secondStr.ElementAt(i);
+                letters[c]--;
+                if (letters[c] < 0)
+                {
+                    Console.WriteLine("String have not Identical char.");
+                    return;
+                }
+            }
+
+            Console.WriteLine("String have Identical char.");
         }
     }
 }
