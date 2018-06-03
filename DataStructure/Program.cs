@@ -39,7 +39,7 @@ namespace DataStructure
                 shiftCharacter.SiftByK("abnish", 2);
 
                 StringHasUniqueChar stringHasUniqueChar = new StringHasUniqueChar();
-                stringHasUniqueChar.StringHasUniqueCharacter("aabnish");
+                stringHasUniqueChar.StringHasUniqueCharacter("aba");
 
                 CheckPermutation checkPermutation = new CheckPermutation();
                 checkPermutation.CheckStringPermutation("abnish", "shabnI");
